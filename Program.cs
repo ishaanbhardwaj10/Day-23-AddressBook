@@ -28,14 +28,14 @@ namespace AddressBook
                 case 8:
                     MultipleAddressBooks multipleAddressBooksTwo = new MultipleAddressBooks();
                     //adding address books
-                    multipleAddressBooksTwo.addAddressBook();
-                    multipleAddressBooksTwo.addAddressBook();
+                    multipleAddressBooksTwo.AddAddressBook();
+                    multipleAddressBooksTwo.AddAddressBook();
                     //adding contacts to above addressbooks
-                    multipleAddressBooksTwo.addContact();
-                    multipleAddressBooksTwo.addContact();
-                    multipleAddressBooksTwo.addContact();
-                    multipleAddressBooksTwo.addContact();
-                    multipleAddressBooksTwo.addContact();
+                    multipleAddressBooksTwo.AddContact();
+                    multipleAddressBooksTwo.AddContact();
+                    multipleAddressBooksTwo.AddContact();
+                    multipleAddressBooksTwo.AddContact();
+                    multipleAddressBooksTwo.AddContact();
                     multipleAddressBooksTwo.Display();
                     //applying the search method
                     multipleAddressBooksTwo.SearchByCityOrState();
