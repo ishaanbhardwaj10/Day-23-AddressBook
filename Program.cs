@@ -95,6 +95,27 @@ namespace AddressBook
                     //sorting contacts in address books by comparing full name
                     multipleAddressBooksFive.SortContactsInAddressBookByComparingFullName();
                     break;
+                case 12:
+                    MultipleAddressBooks multipleAddressBooksSix = new MultipleAddressBooks();
+                    //adding address books
+                    multipleAddressBooksSix.addAddressBook();
+                    multipleAddressBooksSix.addAddressBook();
+                    //adding contacts to above address books
+                    multipleAddressBooksSix.addContact();
+                    multipleAddressBooksSix.addContact();
+                    multipleAddressBooksSix.addContact();
+                    multipleAddressBooksSix.addContact();
+                    multipleAddressBooksSix.addContact();
+                    multipleAddressBooksSix.Display();
+                    //sorting by city
+                    multipleAddressBooksSix.SortContactInAddressBooksByComparingCity();
+                    Console.WriteLine("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+                    //sorting by state
+                    multipleAddressBooksSix.SortContactsInAddressBooksByComparingState();
+                    Console.WriteLine("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%");
+                    //sorting by zip
+                    multipleAddressBooksSix.SortContactsInAddressBooksByComparingZip();
+                    break;
                 default:
                     Console.WriteLine("Please enter a valid use case number!");
                     break;
