@@ -81,6 +81,20 @@ namespace AddressBook
                     multipleAddressBooksFour.CountByCity();
                     multipleAddressBooksFour.CountByState();
                     break;
+                case 11:
+                    MultipleAddressBooks multipleAddressBooksFive = new MultipleAddressBooks();
+                    //adding address books
+                    multipleAddressBooksFive.AddAddressBook();
+                    multipleAddressBooksFive.AddAddressBook();
+                    //adding contacts
+                    multipleAddressBooksFive.AddContact();
+                    multipleAddressBooksFive.AddContact();
+                    multipleAddressBooksFive.AddContact();
+                    multipleAddressBooksFive.AddContact();
+                    multipleAddressBooksFive.AddContact();
+                    //sorting contacts in address books by comparing full name
+                    multipleAddressBooksFive.SortContactsInAddressBookByComparingFullName();
+                    break;
                 default:
                     Console.WriteLine("Please enter a valid use case number!");
                     break;
