@@ -209,6 +209,68 @@ namespace AddressBookPractice
             }
         }
 
+        public void SearchByCityOrState()
+        {
+            Console.WriteLine("Search persons by city or state:\n#1 City\n#2 State");
+            Console.WriteLine("Enter a choice:");
+            int choice = Convert.ToInt32(Console.ReadLine());
+
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("Enter the name of city: ");
+                    string searchInCity = Console.ReadLine();
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("Persons in the city of {0} are: ", searchInCity);
+                    Console.WriteLine("-----------------------------");
+                    foreach (List<Contact> item in addressBooksMap.Values)
+                    {
+                        foreach (Contact element in item.FindAll(e => e.City == searchInCity))
+                        {
+                            Console.WriteLine("-----------------------------");
+                            Console.WriteLine("First name: " + element.FirstName);
+                            Console.WriteLine("Last name: " + element.LastName);
+                            Console.WriteLine("Address: " + element.Address);
+                            Console.WriteLine("City: " + element.City);
+                            Console.WriteLine("State: " + element.State);
+                            Console.WriteLine("Zip: " + element.Zip);
+                            Console.WriteLine("Phone number: " + element.PhoneNumber);
+                            Console.WriteLine("Email: " + element.Email);
+                            Console.WriteLine("-----------------------------");
+                        }
+                    }
+                    SearchByCityOrState();
+                    break;
+                case 2:
+                    Console.WriteLine("Enter the name of state: ");
+                    string searchInState = Console.ReadLine();
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("Persons in the state of {0} are: ", searchInState);
+                    Console.WriteLine("-----------------------------");
+                    foreach (List<Contact> item in addressBooksMap.Values)
+                    {
+                        foreach (Contact element in item.FindAll(e => e.State == searchInState))
+                        {
+                            Console.WriteLine("-----------------------------");
+                            Console.WriteLine("First name: " + element.FirstName);
+                            Console.WriteLine("Last name: " + element.LastName);
+                            Console.WriteLine("Address: " + element.Address);
+                            Console.WriteLine("City: " + element.City);
+                            Console.WriteLine("State: " + element.State);
+                            Console.WriteLine("Zip: " + element.Zip);
+                            Console.WriteLine("Phone number: " + element.PhoneNumber);
+                            Console.WriteLine("Email: " + element.Email);
+                            Console.WriteLine("-----------------------------");
+                        }
+                    }
+                    SearchByCityOrState();
+                    break;
+                default:
+                    SearchByCityOrState();
+                    break;
+            }
+
+        }
 
 
     }
