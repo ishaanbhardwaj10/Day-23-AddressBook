@@ -31,5 +31,14 @@ namespace AddressBook
             }
         }
 
+        public override string ToString()
+        {
+            string personEntry = "First Name: " + this.FirstName + "\nLast Name: " + this.LastName +
+                "\nAddress: " + this.Address + "\nCity: " + this.City + "\nState: " + this.State +
+                "\nZip: " + this.Zip + "\nPhone number: " + this.PhoneNumber + "\nEmail: " + this.Email;
+
+            return personEntry;
+        }
+
     }
 }
