@@ -10,11 +10,14 @@ namespace AddressBookPractice
     {
 
         private Dictionary<string, List<Contact>> addressBooksMap;
-        
+        private Dictionary<string, List<Contact>> cityAndPersonMap;
+        private Dictionary<string, List<Contact>> stateAndPersonMap;
 
         public MultipleAddressBooks()
         {
             addressBooksMap = new Dictionary<string, List<Contact>>();
+            cityAndPersonMap = new Dictionary<string, List<Contact>>();
+            stateAndPersonMap = new Dictionary<string, List<Contact>>();
         }
 
         public void AddAddressBook()
@@ -270,6 +273,49 @@ namespace AddressBookPractice
                     break;
             }
 
+        }
+
+
+        public void MaintainCityAndPersonMap()
+        {
+            foreach (List<Contact> item in addressBooksMap.Values)
+            {
+                foreach (Contact element in item.FindAll(e => e.City != null))
+                {
+
+                    if (cityAndPersonMap.ContainsKey(element.City))
+                    {
+                        cityAndPersonMap[element.City].Add(element);
+                    }
+                    else
+                    {
+                        cityAndPersonMap.Add(element.City, new List<Contact>());
+                        cityAndPersonMap[element.City].Add(element);
+                    }
+
+                }
+            }
+        }
+
+        public void MaintainStateAndPersonMap()
+        {
+            foreach (List<Contact> item in addressBooksMap.Values)
+            {
+                foreach (Contact element in item.FindAll(e => e.State != null))
+                {
+
+                    if (stateAndPersonMap.ContainsKey(element.State))
+                    {
+                        stateAndPersonMap[element.State].Add(element);
+                    }
+                    else
+                    {
+                        stateAndPersonMap.Add(element.State, new List<Contact>());
+                        stateAndPersonMap[element.State].Add(element);
+                    }
+
+                }
+            }
         }
 
 
