@@ -403,5 +403,24 @@ namespace AddressBookPractice
         }
 
 
+        public void SortContactsInAddressBookByComparingFullName()
+        {
+            CompareContactsByName obj = new CompareContactsByName();
+            foreach (KeyValuePair<string, List<Contact>> item in addressBooksMap)
+            {
+                item.Value.Sort(obj);
+                Console.WriteLine("------------------------------");
+                Console.WriteLine("Address Book:\t{0}", item.Key);
+                Console.WriteLine("------------------------------");
+                foreach (Contact element in item.Value.FindAll(e => e.FirstName != null && e.LastName != null))
+                {
+                    Console.WriteLine(element.ToString());
+                    Console.WriteLine("------------------------------");
+                }
+            }
+
+        }
+
+
     }
 }
