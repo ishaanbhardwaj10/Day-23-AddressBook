@@ -318,6 +318,37 @@ namespace AddressBookPractice
             }
         }
 
+        public void CountByCity()
+        {
+            if (cityAndPersonMap.Count != null)
+            {
+                foreach (KeyValuePair<string, List<Contact>> item in cityAndPersonMap)
+                {
+                    string population = item.Value.Count.ToString();
+                    Console.WriteLine("Number of people in the city of \"{0}\": {1}", item.Key, population);
+                }
+            }
+            else
+            {
+                Console.WriteLine("City to persons map is empty.");
+            }
+        }
+
+        public void CountByState()
+        {
+            if (stateAndPersonMap.Count != null)
+            {
+                foreach (KeyValuePair<string, List<Contact>> item in stateAndPersonMap)
+                {
+                    Console.WriteLine("Number of people in the state of \"{0}\": {1}", item.Key, item.Value.Count);
+                }
+            }
+            else
+            {
+                Console.WriteLine("State to persons map is empty.");
+            }
+        }
+
 
     }
 }
