@@ -28,17 +28,36 @@ namespace AddressBook
                 case 8:
                     MultipleAddressBooks multipleAddressBooksTwo = new MultipleAddressBooks();
                     //adding address books
-                    multipleAddressBooksTwo.addAddressBook();
-                    multipleAddressBooksTwo.addAddressBook();
+                    multipleAddressBooksTwo.AddAddressBook();
+                    multipleAddressBooksTwo.AddAddressBook();
                     //adding contacts to above addressbooks
-                    multipleAddressBooksTwo.addContact();
-                    multipleAddressBooksTwo.addContact();
-                    multipleAddressBooksTwo.addContact();
-                    multipleAddressBooksTwo.addContact();
-                    multipleAddressBooksTwo.addContact();
+                    multipleAddressBooksTwo.AddContact();
+                    multipleAddressBooksTwo.AddContact();
+                    multipleAddressBooksTwo.AddContact();
+                    multipleAddressBooksTwo.AddContact();
+                    multipleAddressBooksTwo.AddContact();
                     multipleAddressBooksTwo.Display();
                     //applying the search method
                     multipleAddressBooksTwo.SearchByCityOrState();
+                    break;
+                case 9:
+                    MultipleAddressBooks multipleAddressBooks = new MultipleAddressBooks();
+                    //adding multiple address books
+                    multipleAddressBooks.AddAddressBook();
+                    multipleAddressBooks.AddAddressBook();
+                    //adding contacts to above address books
+                    multipleAddressBooks.AddContact();
+                    multipleAddressBooks.AddContact();
+                    multipleAddressBooks.AddContact();
+                    multipleAddressBooks.AddContact();
+                    multipleAddressBooks.AddContact();
+                    multipleAddressBooks.Display();
+                    //maintaining city to person map
+                    multipleAddressBooks.MaintainCityAndPersonMap();
+                    multipleAddressBooks.DisplayByCity();
+                    //maintaining state to person map
+                    multipleAddressBooks.MaintainStateAndPersonMap();
+                    multipleAddressBooks.DisplayByState();
                     break;
                 default:
                     Console.WriteLine("Please enter a valid use case number!");
