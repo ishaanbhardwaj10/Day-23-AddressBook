@@ -41,23 +41,23 @@ namespace AddressBook
                     multipleAddressBooksTwo.SearchByCityOrState();
                     break;
                 case 9:
-                    MultipleAddressBooks multipleAddressBooks = new MultipleAddressBooks();
+                    MultipleAddressBooks multipleAddressBooksThree = new MultipleAddressBooks();
                     //adding multiple address books
-                    multipleAddressBooks.AddAddressBook();
-                    multipleAddressBooks.AddAddressBook();
+                    multipleAddressBooksThree.AddAddressBook();
+                    multipleAddressBooksThree.AddAddressBook();
                     //adding contacts to above address books
-                    multipleAddressBooks.AddContact();
-                    multipleAddressBooks.AddContact();
-                    multipleAddressBooks.AddContact();
-                    multipleAddressBooks.AddContact();
-                    multipleAddressBooks.AddContact();
-                    multipleAddressBooks.Display();
+                    multipleAddressBooksThree.AddContact();
+                    multipleAddressBooksThree.AddContact();
+                    multipleAddressBooksThree.AddContact();
+                    multipleAddressBooksThree.AddContact();
+                    multipleAddressBooksThree.AddContact();
+                    multipleAddressBooksThree.Display();
                     //maintaining city to person map
-                    multipleAddressBooks.MaintainCityAndPersonMap();
-                    multipleAddressBooks.DisplayByCity();
+                    multipleAddressBooksThree.MaintainCityAndPersonMap();
+                    multipleAddressBooksThree.DisplayByCity();
                     //maintaining state to person map
-                    multipleAddressBooks.MaintainStateAndPersonMap();
-                    multipleAddressBooks.DisplayByState();
+                    multipleAddressBooksThree.MaintainStateAndPersonMap();
+                    multipleAddressBooksThree.DisplayByState();
                     break;
                 default:
                     Console.WriteLine("Please enter a valid use case number!");
