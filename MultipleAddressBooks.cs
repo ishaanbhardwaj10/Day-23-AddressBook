@@ -422,5 +422,65 @@ namespace AddressBookPractice
         }
 
 
+        public void SortContactInAddressBooksByComparingCity()
+        {
+            CompareContactsByCity obj = new CompareContactsByCity();
+
+            foreach (KeyValuePair<string, List<Contact>> item in addressBooksMap)
+            {
+                item.Value.Sort(obj);
+                Console.WriteLine("------------------------------");
+                Console.WriteLine("Address Book:\t{0}", item.Key);
+                Console.WriteLine("------------------------------");
+                foreach (Contact element in item.Value.FindAll(e => e.City != null))
+                {
+                    Console.WriteLine(element.ToString());
+                    Console.WriteLine("------------------------------");
+                }
+            }
+
+        }
+
+
+        public void SortContactsInAddressBooksByComparingState()
+        {
+            CompareContactsByState obj = new CompareContactsByState();
+
+            foreach (KeyValuePair<string, List<Contact>> item in addressBooksMap)
+            {
+                item.Value.Sort(obj);
+                Console.WriteLine("------------------------------");
+                Console.WriteLine("Address Book:\t{0}", item.Key);
+                Console.WriteLine("------------------------------");
+                foreach (Contact element in item.Value.FindAll(e => e.State != null))
+                {
+                    Console.WriteLine(element.ToString());
+                    Console.WriteLine("------------------------------");
+                }
+            }
+
+        }
+
+
+        public void SortContactsInAddressBooksByComparingZip()
+        {
+            CompareContactsByZip obj = new CompareContactsByZip();
+
+            foreach (KeyValuePair<string, List<Contact>> item in addressBooksMap)
+            {
+                item.Value.Sort(obj);
+                Console.WriteLine("------------------------------");
+                Console.WriteLine("Address Book:\t{0}", item.Key);
+                Console.WriteLine("------------------------------");
+                foreach (Contact element in item.Value.FindAll(e => e.Zip != null))
+                {
+                    Console.WriteLine(element.ToString());
+                    Console.WriteLine("------------------------------");
+                }
+            }
+
+        }
+
+
     }
 }
