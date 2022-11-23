@@ -318,6 +318,59 @@ namespace AddressBookPractice
             }
         }
 
+
+        public void DisplayByCity()
+        {
+            foreach (KeyValuePair<string, List<Contact>> item in cityAndPersonMap)
+            {
+                Console.WriteLine("===============================");
+                Console.WriteLine("Persons in City: " + item.Key);
+                Console.WriteLine("===============================");
+                List<Contact> list = item.Value;
+                foreach (Contact contact in list.ToList())
+                {
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("First name: " + contact.FirstName);
+                    Console.WriteLine("Last name: " + contact.LastName);
+                    Console.WriteLine("Address: " + contact.Address);
+                    Console.WriteLine("City: " + contact.City);
+                    Console.WriteLine("State: " + contact.State);
+                    Console.WriteLine("Zip: " + contact.Zip);
+                    Console.WriteLine("Phone number: " + contact.PhoneNumber);
+                    Console.WriteLine("Email: " + contact.Email);
+                    Console.WriteLine("-----------------------------");
+                }
+
+            }
+        }
+
+
+        public void DisplayByState()
+        {
+            foreach (KeyValuePair<string, List<Contact>> item in stateAndPersonMap)
+            {
+                Console.WriteLine("===============================");
+                Console.WriteLine("Persons in State: " + item.Key);
+                Console.WriteLine("===============================");
+                List<Contact> list = item.Value;
+                foreach (Contact contact in list.ToList())
+                {
+                    Console.WriteLine("-----------------------------");
+                    Console.WriteLine("First name: " + contact.FirstName);
+                    Console.WriteLine("Last name: " + contact.LastName);
+                    Console.WriteLine("Address: " + contact.Address);
+                    Console.WriteLine("City: " + contact.City);
+                    Console.WriteLine("State: " + contact.State);
+                    Console.WriteLine("Zip: " + contact.Zip);
+                    Console.WriteLine("Phone number: " + contact.PhoneNumber);
+                    Console.WriteLine("Email: " + contact.Email);
+                    Console.WriteLine("-----------------------------");
+                }
+
+            }
+        }
+
+
         public void CountByCity()
         {
             if (cityAndPersonMap.Count != null)
