@@ -1,4 +1,6 @@
-﻿namespace AddressBook
+﻿using System;
+
+namespace AddressBook
 {
     class Program
     {
@@ -7,6 +9,7 @@
 
             Console.WriteLine("Welcome to Address Book Program");
             Console.WriteLine("Use Case #7: No Duplicate Entries in Address Book");
+            Console.WriteLine("Use Case #8: Search Persons in City or State in Address Books");
 
             Console.Write("Choose a use case number to run the program: ");
             int choice = Convert.ToInt32(Console.ReadLine());
@@ -21,6 +24,21 @@
                     multipleAddressBooks.AddContact();
                     multipleAddressBooks.AddContact();  //if this second contact has the same name as first contact, we encounter runtime error
                     multipleAddressBooks.Display();
+                    break;
+                case 8:
+                    MultipleAddressBooks multipleAddressBooksTwo = new MultipleAddressBooks();
+                    //adding address books
+                    multipleAddressBooksTwo.addAddressBook();
+                    multipleAddressBooksTwo.addAddressBook();
+                    //adding contacts to above addressbooks
+                    multipleAddressBooksTwo.addContact();
+                    multipleAddressBooksTwo.addContact();
+                    multipleAddressBooksTwo.addContact();
+                    multipleAddressBooksTwo.addContact();
+                    multipleAddressBooksTwo.addContact();
+                    multipleAddressBooksTwo.Display();
+                    //applying the search method
+                    multipleAddressBooksTwo.SearchByCityOrState();
                     break;
                 default:
                     Console.WriteLine("Please enter a valid use case number!");
